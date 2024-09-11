@@ -1,108 +1,115 @@
 \documentclass[a4paper]{article}
+
+% Packages
 \usepackage[14pt]{extsizes}
+\usepackage[T2A]{fontenc}
 \usepackage[russian]{babel}
-\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm]{geometry}
-\usepackage{listings}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{listingsutf8}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, arrows, shapes.misc}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{hyperref}
-% Настройка вида листинга
-\lstset{
-    language=C++,                 % Язык программирования
-    basicstyle=\ttfamily\small,   % Размер и тип шрифта
-    keywordstyle=\color{blue},    % Стиль ключевых слов
-    stringstyle=\color{red},      % Стиль строк
-    commentstyle=\color{gray},   % Стиль комментариев
-    morecomment=[l][\color{magenta}]{\#},
-    breaklines=true,              % Перенос длинных строк
-    numbers=left,                 % Нумерация строк слева
-    numberstyle=\tiny\color{gray},% Стиль нумерованных строк
-    frame=single,                 % Рамка вокруг кода
-    showstringspaces=false        % Не показывать пробелы в строках
-}
-\tikzset{
-    startstop/.style={
-        rectangle, 
-        rounded corners,
-        minimum width=3cm,
-        minimum height=1cm,
-        text centered, 
-        draw=black, 
-        fill=red!30
-    },
-    io/.style={
-        trapezium, 
-        trapezium left angle=70,
-        trapezium right angle=110,
-        minimum width=3cm,
-        minimum height=1cm,
-        text centered,
-        draw=black,
-        fill=blue!30
-    },
-    process/.style={
-        rectangle,
-        minimum width=3cm,
-        minimum height=1cm,
-        text centered, 
-        draw=black,
-        fill=orange!30
-    },
-    decision/.style={
-        diamond,
-        aspect=2,
-        minimum width=3cm,
-        text centered,
-        draw=black,
-        fill=green!30
-    },
-    arrow/.style={
-        thick,
-        ->,
-        >=stealth
-    },
-    prep/.style={
-        chamfered rectangle,
-        chamfered rectangle xsep=2cm,
-        draw,
-        thick,
-        minimum width=5cm,
-        minimum height=1cm,
-        text centered,
-        text width=2.5cm,
-        font=\small,
-        fill=yellow!30
-    },
-}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=20mm]{geometry}
+\usepackage{graphicx} % For images
+\usepackage{amsmath, amssymb} % For equations
+\usepackage{booktabs} % For better tables
+\usepackage{pgfplots} % For plotting graphs
+\usepackage{xcolor} % For color support
+\usepackage{caption} % For captioning tables and figures
+\usepackage{float} % For precise float placement (images, tables)
+\usepackage{array} % For better table management
+\pgfplotsset{compat=1.17}
 
+% Importing custom definitions (lstset, tikzset, etc.)
+\input{../common/title-lab.tex}
+\input{../common/title-hw.tex}
+% \input{../common/lstset.tex}
+% \input{../common/tikzset.tex}
 
-% -----------------------------------------------------
-
-\begin{document} 
+\begin{document}
 
 % Title page
-\input{title}
+\labtitle{1}{Исследование характеристик источника электрической энергии постоянного тока}{3331}{33}{Дворкин Борис Александрович}{11.09.2024}{18.09.2024}{09.10.2024}{}
+\thispagestyle{empty}
 
-% First section - Description
-% \input{description}
-%
-% % Second section - Chart diagram
-% \input{chart}
-%
-% % Third section - Code
-% \input{code}
-%
-% % Forth section - Examples of code usage
-% \input{examples}
-%
-% % Fith section - Conclusion
-% \input{conclusion}
+\newpage
+\pagestyle{plain}
+\setcounter{page}{1}
+
+% Section 1: Схема эксперимента
+\section{Схема эксперимента}
+На рисунке 1.1 представлена схема замещения источника электрической энергии постоянного тока и нагрузки, созданная в приложении LTspice.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{schema.png} % Make sure the path to the image is correct
+	\caption{Схема замещения источника электрической энергии в LTspice.}
+\end{figure}
+
+% Section 2: Таблица измерений
+\section{Заполненная таблица 1.1}
+\begin{table}[H]
+	\centering
+	\addtocounter{table}{0}
+	\caption*{Таблица 1.1: Результаты измерений и расчётов}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		k  & \multicolumn{2}{c|}{Измерения} & \multicolumn{4}{c|}{Расчёт: r = 594.208 [Ом], E = 12 [B], Isc = 20 [мА]}                                            \\
+		\hline
+		0  & $R_n$ [Ом]                     & $U_n$ [В]                                                                & $I_n$ [мА] & $P_n$ [Вт] & $n$ & $r$ [Ом] \\
+		\hline
+		1  & $\infty$                       & 12.000                                                                   & 0.00       & 0.00       & 1.0 & --       \\
+		2  & 5400                           & 10.692                                                                   & 1.98       & 0.021      & 0.9 & 600.00   \\
+		3  & 2400                           & 9.504                                                                    & 3.96       & 0.038      & 0.8 & 600.00   \\
+		4  & 1400                           & 8.316                                                                    & 5.94       & 0.049      & 0.7 & 600.00   \\
+		5  & 900                            & 7.128                                                                    & 7.92       & 0.056      & 0.6 & 600.00   \\
+		6  & 600                            & 5.940                                                                    & 9.9        & 0.059      & 0.5 & 600.00   \\
+		7  & 400                            & 4.752                                                                    & 11.88      & 0.056      & 0.4 & 599.294  \\
+		8  & 257                            & 3.563                                                                    & 13.864     & 0.049      & 0.3 & 600.709  \\
+		9  & 150                            & 2.376                                                                    & 15.84      & 0.038      & 0.2 & 601.729  \\
+		10 & 67                             & 1.193                                                                    & 17.806     & 0.021      & 0.1 & 543.756  \\
+		11 & 0                              & 0.000                                                                    & 20         & 0.000      & 0.0 & --       \\
+		\hline
+	\end{tabular}
+\end{table}
+
+% Section 3: Пример расчёта
+\include{calculation}
+
+% Section 4: Расчётная внешняя характеристика источника
+\include{external_charasteristic_graph}
+
+% Section 5: Графики зависимости Pn(In) и η(In)
+\input{power_graph}
+\input{efficiency_graph}
+
+% Section 6: Выводы по работе
+\section{Выводы по работе}
+
+В ходе данной лабораторной работы я исследовал внешнюю характеристику источника электрической 
+энергии постоянного тока и определил параметры схемы его замещения на основе экспериментальных 
+данных. Схема была собрана в программном обеспечении для моделирования аналоговых электронных 
+схем «LTspice», где я измерил напряжение на резисторах при различных сопротивлениях нагрузки 
+и выявил, что с уменьшением сопротивления резисторов напряжение на них падает, 
+а ток в цепи увеличивается. Это изменение существенно влияет на распределение мощности в 
+нагрузке и на эффективность работы источника.
+
+В процессе работы я применил закон Джоуля-Ленца, 
+который объясняет потери мощности на внутреннем сопротивлении источника при протекании тока. 
+Согласно закону, выделяемая энергия на внутреннем сопротивлении источника определяется 
+выражением \(Q = I^2 R t\). Увеличение тока приводит к большему выделению тепла внутри источника,
+что снижает количество энергии, передаваемой на нагрузку, и соответственно уменьшает КПД.
+
+Я провёл измерение напряжения холостого хода \( U_0 \), 
+которое использовалось для расчёта тока короткого замыкания 
+и определения внешней характеристики источника. 
+Также я рассчитал токи, мощности и КПД на основе измерений, 
+что позволило оценить внутреннее сопротивление источника. 
+Все расчёты были проведены в Excel, где я составил таблицы с данными, а графики зависимостей 
+\( P_n(I_n) \) и \( \eta(I_n) \) были построены в LaTeX. 
+Это позволило оформить результаты в соответствии с научными стандартами и 
+закрепить навыки работы с математическими пакетами для дальнейшей работы, 
+включая подготовку к диплому.
+
+В итоге, я пришёл к выводу, что внутреннее сопротивление источника играет критическую роль 
+в его характеристиках: при высоких токах оно значительно снижает эффективность передачи 
+энергии на нагрузку, что приводит к уменьшению КПД и снижению мощности. 
+Эксперимент подтвердил теоретические модели, а полученные данные дали возможность точно 
+рассчитать параметры реальных электрических цепей.
 
 \end{document}
