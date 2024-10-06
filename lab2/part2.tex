@@ -1,46 +1,52 @@
-\subsection{Апериодический процесс}
+\subsection{Исследование апериодического процесса}
 
 \subsubsection{Схема исследуемой цепи}
-На рисунке 1.1 представлена схема замещения источника электрической энергии постоянного тока и нагрузки, созданная в приложении LTspice.
+На рисунке 3 представлена схема замещения генератора прямоугольного напряжения с резистивной, ёмкостной и индуктивной нагрузками, созданная в приложении LTspice.
 
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.6\textwidth]{rcl-schema.png} % Make sure the path to the image is correct
-% 	\caption{Схема замещения источника электрической энергии в LTspice.}
-% \end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/rcl_1-schema.png}
+	\caption{Схема замещения источника электрической энергии в LTspice.}
+\end{figure}
 
 \subsubsection{Расчётные формулы и расчёты}
 
 Значение времени переходного процесса \( t_{0.5} \) определяется как время, за которое напряжение на конденсаторе достигает половины своего установившегося значения. Постоянная времени \( \tau \) определяется как:
 
 \[
-\tau = \frac{t_{0.5}}{\ln 2}
+	\tau = \frac{t_{0.5}}{\ln 2}
 \]
 
 \textbf{Вычисление постоянной времени \( \tau \):}
 
 \[
-\tau = \frac{t_{0.5}}{\ln 2} = \frac{8.41833 \, \text{мс}}{0.69314718} = 12.144 \, \text{мс}
+	\tau = \frac{t_{0.5}}{\ln 2} = \frac{8.41833 \, \text{мс}}{0.69314718} = 12.144 \, \text{мс}
 \]
 
 \subsubsection{Графики переходных процессов}
+\input{rcl-aperiodic-graph}
 
 \subsubsection{Таблица результатов 4.4}
 
-\subsection{Колебательный процесс}
+
+% -------------------------------
+
+
+\subsection{Исследование колебательного процесса}
 
 \subsubsection{Схема исследуемой цепи}
-На рисунке 1.1 представлена схема замещения источника электрической энергии постоянного тока и нагрузки, созданная в приложении LTspice.
+На рисунке 4 представлена схема замещения генератора прямоугольного напряжения с резистивной, ёмкостной и индуктивной нагрузками, созданная в приложении LTspice.
 
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.6\textwidth]{rcl-schema.png} % Make sure the path to the image is correct
-% 	\caption{Схема замещения источника электрической энергии в LTspice.}
-% \end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.96\textwidth]{./data/rcl_2-schema.png}
+	\caption{Схема замещения источника электрической энергии в LTspice.}
+\end{figure}
 
 \subsubsection{Расчётные формулы и расчёты}
 
 \subsubsection{Графики переходных процессов}
+\input{rcl-oscillatory-graph}
 
 \subsubsection{Таблица результатов 4.5}
 
