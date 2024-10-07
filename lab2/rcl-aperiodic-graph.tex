@@ -50,9 +50,6 @@
 			] table [x expr=\thisrowno{0}*1000, y index=2, col sep=space] {./data/lab2-3.txt};
 			\addlegendentry{$U_L$}
 
-			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60, 0.027)};
-			\node[anchor=east] at (axis cs:61,-0.15) {\scriptsize $0.027 \, \text{В} = U_L(\infty)$};
-
 		\end{axis}
 
 		% Secondary axis for Current
@@ -80,15 +77,29 @@
 			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{4}*1000, col sep=space] {./data/lab2-3.txt};
 			\addlegendentry{$I$}
 
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(300, 0)};
+			% U_L (0+)
+			\addplot[color=black, only marks, mark=*, mark size=1.7pt] coordinates {(300, 80)};
+			\node[
+				anchor=west,
+				font=\scriptsize
+			] at (axis cs:300,77) {$U_L(0+) = 4\, \text{В} $};
+
+			% U_c (0+)
+			\addplot[color=black, only marks, mark=*, mark size=1.7pt] coordinates {(300, -40)};
+			\node[
+				anchor=west,
+				font=\scriptsize
+			] at (axis cs:300,-41) {$U_c(0+) = -1,995\, \text{В} $};
+
+			% I (0+)
+			\addplot[color=black, only marks, mark=*, mark size=1.7pt] coordinates {(300, 0)};
 			\node[
 				anchor=east,
 				font=\scriptsize
-			] at (axis cs:121,-47) {$-49.324\, \text{mA} = I(0+)$};
-			%
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1, 49.325)};
-			% \draw[dashed, grey, very thin] (axis cs:60, 49.3) -- (axis cs:120, 49.3);
-			% \node[anchor=west] at (axis cs:60.1,47) {\scriptsize $I(\infty) = 49.325 \, mA$};
+			] at (axis cs:303,-4) {$-0,031\, \text{мА} = I(0+)$};
+
+			\draw[dashed, grey, very thin] (axis cs:0, 0) -- (axis cs:600, 0);
+			\draw[dashed, grey, very thin] (axis cs:0, 80) -- (axis cs:300, 80);
 		\end{axis}
 	\end{tikzpicture}
 \end{figure}

@@ -93,15 +93,19 @@
 			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{4}*1000, col sep=space] {./data/lab2-4.txt};
 			\addlegendentry{$I$}
 
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(120, -49.324)};
-			% \node[
-			% 	anchor=east,
-			% 	font=\scriptsize
-			% ] at (axis cs:121,-47) {$-49.324\, \text{mA} = I(0+)$};
-			%
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1, 49.325)};
-			% \draw[dashed, grey, very thin] (axis cs:60, 49.3) -- (axis cs:120, 49.3);
-			% \node[anchor=west] at (axis cs:60.1,47) {\scriptsize $I(\infty) = 49.325 \, mA$};
+			% Add T, Im1, Im2 labels and arrows
+			\draw[<->, thick] (axis cs:300,0) -- (axis cs:378,0);
+			\node[anchor=center] at (axis cs:339,-4) {$T$};
+
+			\draw[<->, thick] (axis cs:350,0) -- (axis cs:350,71.082);
+			\node[anchor=west] at (axis cs:350,35.5) {$I_{m1}$};
+			\draw[dashed, grey, very thin] (axis cs:317,71.082) -- (axis cs:351,71.082);
+
+			\draw[<->, thick] (axis cs:400,0) -- (axis cs:400,-31.584);
+			\node[anchor=west] at (axis cs:400,-20) {$I_{m2}$};
+			\draw[dashed, grey, very thin] (axis cs:355,-31.584) -- (axis cs:400,-31.584);
+
+			\draw[dashed, grey, very thin] (axis cs:0, 0) -- (axis cs:600, 0);
 		\end{axis}
 	\end{tikzpicture}
 \end{figure}
