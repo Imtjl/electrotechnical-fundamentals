@@ -1,9 +1,10 @@
 % lab2.txt data structure:
 % time	V(n001)	V(n002)	I(R1)
 
+\FloatBarrier
 \begin{figure}[h]
 	\centering
-	\begin{tikzpicture}[scale=0.88]
+	\begin{tikzpicture}[scale=0.82]
 
 		% Voltage axis
 		\begin{axis}[
@@ -49,9 +50,8 @@
 			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60.1,1.972884)};
 			\node[anchor=west] at (axis cs:60.1,1.872884) {\scriptsize $U_c(\infty) = 1.973 \, \text{В}$};
 
-			\draw[dashed,grey,very thin] (axis cs:120,-1.973) -- (axis cs:120, -1.973)
-			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(120, -1.973)};
-			\node[anchor=east] at (axis cs:121,-1.82) {\scriptsize $ -1.973 \, \text{В} = U_c(0+)$};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(0, -1.999)};
+			\node[anchor=west] at (axis cs:-0.2,-1.92) {\scriptsize $U_c(0+) = -1.999 \, \text{В}$};
 
 		\end{axis}
 
@@ -91,11 +91,11 @@
 			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(8.4, 50)};
 			\node[anchor=west] at (axis cs:8.4,50) {\scriptsize $I(t_{0.5}) = 50\, \text{мА}$};
 
-			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(8.4, -100)};
-			\node[anchor=east] at (axis cs:9,-95) {\small $t_{0.5}$};
+			\addplot[color=black, only marks, mark=*, mark size=1pt] coordinates {(8.4, -100)};
 
 			\draw[dashed, grey, very thin] (axis cs:8.4, 50) -- (axis cs:8.4, -102);
 
 		\end{axis}
 	\end{tikzpicture}
 \end{figure}
+\FloatBarrier

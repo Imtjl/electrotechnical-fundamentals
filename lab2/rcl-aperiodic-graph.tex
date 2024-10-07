@@ -38,13 +38,7 @@
 				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y index=1, col sep=space] {./data/lab2-3.txt};
 			\addlegendentry{$U_c$}
-			%
-			% \addplot[color=black, only marks, mark=*, mark size=1pt] coordinates {(0, 4)};
-			% \node[anchor=west] at (axis cs:0,3.85) {\scriptsize $U_L(0+) = 4 \, V$};
-			%
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60, 0.027)};
-			% \node[anchor=east] at (axis cs:61,-0.15) {\scriptsize $0.027 \, V = U_L(\infty)$};
-			% \draw[dashed, grey, very thin] (axis cs:0, 0.027) -- (axis cs:60, 0.027);
+
 
 			% Plot V(n002)
 			\addplot[
@@ -56,14 +50,8 @@
 			] table [x expr=\thisrowno{0}*1000, y index=2, col sep=space] {./data/lab2-3.txt};
 			\addlegendentry{$U_L$}
 
-			% \draw[dashed,grey,very thin] (axis cs:120,1.972884) -- (axis cs:60.1,1.972884);
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1,1.972884)};
-			% \node[anchor=west] at (axis cs:60.1,1.872884) {\scriptsize $U_c(\infty) = 1.973 \, V$};
-			%
-			% \draw[dashed,grey,very thin] (axis cs:120,-1.973) -- (axis cs:120, -1.973)
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(120, -1.973)};
-			% \node[anchor=east] at (axis cs:121,-1.82) {\scriptsize $ -1.973 \, V = U_c(0+)$};
-
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60, 0.027)};
+			\node[anchor=east] at (axis cs:61,-0.15) {\scriptsize $0.027 \, \text{В} = U_L(\infty)$};
 
 		\end{axis}
 
@@ -92,11 +80,11 @@
 			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{4}*1000, col sep=space] {./data/lab2-3.txt};
 			\addlegendentry{$I$}
 
-			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(120, -49.324)};
-			% \node[
-			% 	anchor=east,
-			% 	font=\scriptsize
-			% ] at (axis cs:121,-47) {$-49.324\, \text{mA} = I(0+)$};
+			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(300, 0)};
+			\node[
+				anchor=east,
+				font=\scriptsize
+			] at (axis cs:121,-47) {$-49.324\, \text{mA} = I(0+)$};
 			%
 			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1, 49.325)};
 			% \draw[dashed, grey, very thin] (axis cs:60, 49.3) -- (axis cs:120, 49.3);

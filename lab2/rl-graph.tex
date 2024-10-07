@@ -1,6 +1,7 @@
 % lab2-2.txt graph structure:
 % time	V(n001)	V(n002)	I(R1)
 
+\FloatBarrier
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[scale=0.88]
@@ -74,11 +75,11 @@
 			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{3}*1000, col sep=space] {./data/lab2-2.txt};
 			\addlegendentry{$I$}
 
-			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(120, -49.324)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(0, -50)};
 			\node[
-				anchor=east,
+				anchor=west,
 				font=\scriptsize
-			] at (axis cs:121,-47) {$-49.324\, \text{мА} = I(0+)$};
+			] at (axis cs:-0.2,-48) {$-49.998\, \text{мА} = I(0+)$};
 
 			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60.1, 49.325)};
 			\draw[dashed, grey, very thin] (axis cs:60, 49.3) -- (axis cs:120, 49.3);
@@ -86,3 +87,4 @@
 		\end{axis}
 	\end{tikzpicture}
 \end{figure}
+\FloatBarrier
