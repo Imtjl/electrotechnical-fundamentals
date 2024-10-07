@@ -31,14 +31,14 @@
 			% Plot V(n001)
 			\addplot[
 				color=red,
-				thick,
+				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y index=1, col sep=space] {./data/lab2.txt};
 			\addlegendentry{$E$}
 
 			% Plot V(n002)
 			\addplot[
 				color=green,
-				thick,
+				line width=1.2pt,
 				% nodes near coords,
 				% mark=*,
 				% every node near coord/.append style={font=\tiny, black}
@@ -46,11 +46,11 @@
 			\addlegendentry{$U_c$}
 
 			\draw[dashed,grey,very thin] (axis cs:120,1.972884) -- (axis cs:60.1,1.972884);
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1,1.972884)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60.1,1.972884)};
 			\node[anchor=west] at (axis cs:60.1,1.872884) {\scriptsize $U_c(\infty) = 1.973 \, V$};
 
 			\draw[dashed,grey,very thin] (axis cs:120,-1.973) -- (axis cs:120, -1.973)
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(120, -1.973)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(120, -1.973)};
 			\node[anchor=east] at (axis cs:121,-1.82) {\scriptsize $ -1.973 \, V = U_c(0+)$};
 
 		\end{axis}
@@ -76,22 +76,22 @@
 			% Plot I(R1)
 			\addplot[
 				color=blue,
-				thick,
+				line width=1.2pt,
 				% mark=ball,
 				% mark size=1.5pt
 			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{3}*1000, col sep=space] {./data/lab2.txt};
 			\addlegendentry{$I$}
 
-			\addplot[color=black, only marks, mark=*, mark size=1pt] coordinates {(0.13, 100)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(0.13, 100)};
 			\node[anchor=west] at (axis cs:0,95.5) {\scriptsize $I(0+) = 99.996 \, mA$};
 
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60, 0.674)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60, 0.674)};
 			\node[anchor=east] at (axis cs:61,-4.5) {\scriptsize $0.674 \, mA = I(\infty)$};
 
-			\addplot[color=black, only marks, mark=*, mark size=1.7pt] coordinates {(8.4, 50)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(8.4, 50)};
 			\node[anchor=west] at (axis cs:8.4,50) {\scriptsize $I(t_{0.5}) = 50\, \text{mA}$};
 
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(8.4, -100)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(8.4, -100)};
 			\node[anchor=east] at (axis cs:9,-95) {\small $t_{0.5}$};
 
 			\draw[dashed, grey, very thin] (axis cs:8.4, 50) -- (axis cs:8.4, -102);

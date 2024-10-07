@@ -29,21 +29,21 @@
 			% Plot V(n001)
 			\addplot[
 				color=red,
-				thick,
+				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y index=1, col sep=space] {./data/lab2-2.txt};
 			\addlegendentry{$E$}
 
 			% Plot V(n002)
 			\addplot[
 				color=green,
-				thick,
+				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y index=2, col sep=space] {./data/lab2-2.txt};
 			\addlegendentry{$U_L$}
 
-			\addplot[color=black, only marks, mark=*, mark size=1pt] coordinates {(0, 4)};
+			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(0, 4)};
 			\node[anchor=west] at (axis cs:0,3.85) {\scriptsize $U_L(0+) = 4 \, V$};
 
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60, 0.027)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60, 0.027)};
 			\node[anchor=east] at (axis cs:61,-0.15) {\scriptsize $0.027 \, V = U_L(\infty)$};
 			\draw[dashed, grey, very thin] (axis cs:0, 0.027) -- (axis cs:60, 0.027);
 
@@ -56,7 +56,7 @@
 				ymin=-50, ymax=50,  % Y-axis range for Current
 				axis y line=right,         % Place this axis on the right for Current
 				axis x line=none,
-				thick,
+				line width=1.2pt,
 				ylabel={Current [mA]}, % Y-axis label for Current
 				label style={font=\small},
 				tick label style={font=\small},
@@ -68,16 +68,19 @@
 				legend style={at={(0.96,0.82)}, anchor=north east},
 			]
 			% Plot I(R1)
-			\addplot[color=blue, thick] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{3}*1000, col sep=space] {./data/lab2-2.txt};
+			\addplot[
+				color=blue,
+				line width=1.2pt,
+			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{3}*1000, col sep=space] {./data/lab2-2.txt};
 			\addlegendentry{$I$}
 
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(120, -49.324)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(120, -49.324)};
 			\node[
 				anchor=east,
 				font=\scriptsize
 			] at (axis cs:121,-47) {$-49.324\, \text{mA} = I(0+)$};
 
-			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1, 49.325)};
+			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60.1, 49.325)};
 			\draw[dashed, grey, very thin] (axis cs:60, 49.3) -- (axis cs:120, 49.3);
 			\node[anchor=west] at (axis cs:60.1,47) {\scriptsize $I(\infty) = 49.325 \, mA$};
 		\end{axis}

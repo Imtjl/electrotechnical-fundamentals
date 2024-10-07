@@ -19,7 +19,7 @@
 				major tick length=0.2cm,
 				ytick style={thick, black},
 				xtick style={thick, black},
-				ytick={-3.2, -2.4, -1.6, -0.8, 0, 0.8, 1.6, 2.4, 3.2},
+				ytick={-3, -2, -1, 0, 1, 2, 3},
 				extra y ticks={-4, 4},
 				extra y tick style={tick style={opacity=0}},
 				x unit=0.001,
@@ -27,17 +27,17 @@
 
 			% Plot V(n001)
 			\addplot[
-				color=red,
-				thick,
+				color=teal,
+				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y index=3, col sep=space] {./data/lab2-4.txt};
 			\addlegendentry{$E$}
 
 			% Plot V(n002)
 			\addplot[
-				color=magenta,
-				thick,
+				color=orange,
+				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y index=1, col sep=space] {./data/lab2-4.txt};
-			\addlegendentry{$U_L$}
+			\addlegendentry{$U_c$}
 			%
 			% \addplot[color=black, only marks, mark=*, mark size=1pt] coordinates {(0, 4)};
 			% \node[anchor=west] at (axis cs:0,3.85) {\scriptsize $U_L(0+) = 4 \, V$};
@@ -48,13 +48,13 @@
 
 			% Plot V(n002)
 			\addplot[
-				color=green,
-				thick,
+				color=magenta,
+				line width=1.2pt,
 				% nodes near coords,
 				% mark=*,
 				% every node near coord/.append style={font=\tiny, black}
 			] table [x expr=\thisrowno{0}*1000, y index=2, col sep=space] {./data/lab2-4.txt};
-			\addlegendentry{$U_c$}
+			\addlegendentry{$U_L$}
 
 			% \draw[dashed,grey,very thin] (axis cs:120,1.972884) -- (axis cs:60.1,1.972884);
 			% \addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(60.1,1.972884)};
@@ -80,7 +80,7 @@
 				tick label style={font=\small},
 				major tick length=0.2cm,
 				ytick style={thick, black},
-				ytick={-70, -60, -50, -40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70},
+				ytick={-60, -40, -20, 0, 20, 40, 60},
 				extra y ticks={-80, 80},
 				extra y tick style={tick style={opacity=0}},
 				legend style={at={(0.961,0.765)}, anchor=north east},
@@ -88,7 +88,7 @@
 			% Plot I
 			\addplot[
 				color=cyan,
-				thick,
+				line width=1.2pt,
 			] table [x expr=\thisrowno{0}*1000, y expr=\thisrowno{4}*1000, col sep=space] {./data/lab2-4.txt};
 			\addlegendentry{$I$}
 
