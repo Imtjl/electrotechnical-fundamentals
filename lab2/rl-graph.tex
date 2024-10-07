@@ -5,25 +5,25 @@
 	\centering
 	\begin{tikzpicture}[scale=0.88]
 		\begin{axis}[
-				width=17cm, height=12cm,
-				xlabel={Time [ms]},    % X-axis label
-				ylabel={Voltage [V]},    % Y-axis label
-				grid=major,           % Enable grid
-				legend style={at={(0.857,0.95)}, anchor=north west}, % Legend position
-				thick,                % Line thickness
-				xmin=0, xmax=120,    % X-axis range
-				ymin=-4, ymax=4,      % Y-axis range
-				axis y line=left,
-				axis x line=bottom,
-				label style={font=\small},
-				tick label style={font=\small},
-				major tick length=0.2cm,
-				ytick style={thick, black},
-				xtick style={thick, black},
-				ytick={-3.2, -2.4, -1.6, -0.8, 0, 0.8, 1.6, 2.4, 3.2},
-				extra y ticks={-4, 4},
-				extra y tick style={tick style={opacity=0}},
-				x unit=0.001,
+			width=17cm, height=12cm,
+			xlabel={Время [мс]},
+			ylabel={Напряжение [В]},
+			grid=major,           % Enable grid
+			legend style={at={(0.857,0.95)}, anchor=north west}, % Legend position
+			thick,                % Line thickness
+			xmin=0, xmax=120,    % X-axis range
+			ymin=-4, ymax=4,      % Y-axis range
+			axis y line=left,
+			axis x line=bottom,
+			label style={font=\small},
+			tick label style={font=\small},
+			major tick length=0.2cm,
+			ytick style={thick, black},
+			xtick style={thick, black},
+			ytick={-3.2, -2.4, -1.6, -0.8, 0, 0.8, 1.6, 2.4, 3.2},
+			extra y ticks={-4, 4},
+			extra y tick style={tick style={opacity=0}},
+			x unit=0.001,
 			]
 
 			% Plot V(n001)
@@ -41,31 +41,31 @@
 			\addlegendentry{$U_L$}
 
 			\addplot[color=black, only marks, mark=*, mark size=1.5pt] coordinates {(0, 4)};
-			\node[anchor=west] at (axis cs:0,3.85) {\scriptsize $U_L(0+) = 4 \, V$};
+			\node[anchor=west] at (axis cs:0,3.85) {\scriptsize $U_L(0+) = 4 \, \text{В}$};
 
 			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60, 0.027)};
-			\node[anchor=east] at (axis cs:61,-0.15) {\scriptsize $0.027 \, V = U_L(\infty)$};
+			\node[anchor=east] at (axis cs:61,-0.15) {\scriptsize $0.027 \, \text{В} = U_L(\infty)$};
 			\draw[dashed, grey, very thin] (axis cs:0, 0.027) -- (axis cs:60, 0.027);
 
 		\end{axis}
 
 		% Secondary axis for Current
 		\begin{axis}[
-				width=17cm, height=12cm,
-				xmin=0, xmax=120,    % X-axis range (same as for Voltage)
-				ymin=-50, ymax=50,  % Y-axis range for Current
-				axis y line=right,         % Place this axis on the right for Current
-				axis x line=none,
-				line width=1.2pt,
-				ylabel={Current [mA]}, % Y-axis label for Current
-				label style={font=\small},
-				tick label style={font=\small},
-				major tick length=0.2cm,
-				ytick style={thick, black},
-				ytick={-40, -30, -20, -10, 0, 10, 20, 30, 40},
-				extra y ticks={-50, 50},
-				extra y tick style={tick style={opacity=0}},
-				legend style={at={(0.96,0.82)}, anchor=north east},
+			width=17cm, height=12cm,
+			xmin=0, xmax=120,    % X-axis range (same as for Voltage)
+			ymin=-50, ymax=50,  % Y-axis range for Current
+			axis y line=right,         % Place this axis on the right for Current
+			axis x line=none,
+			line width=1.2pt,
+			ylabel={Ток [мА]},
+			label style={font=\small},
+			tick label style={font=\small},
+			major tick length=0.2cm,
+			ytick style={thick, black},
+			ytick={-40, -30, -20, -10, 0, 10, 20, 30, 40},
+			extra y ticks={-50, 50},
+			extra y tick style={tick style={opacity=0}},
+			legend style={at={(0.96,0.82)}, anchor=north east},
 			]
 			% Plot I(R1)
 			\addplot[
@@ -78,11 +78,11 @@
 			\node[
 				anchor=east,
 				font=\scriptsize
-			] at (axis cs:121,-47) {$-49.324\, \text{mA} = I(0+)$};
+			] at (axis cs:121,-47) {$-49.324\, \text{мА} = I(0+)$};
 
 			\addplot[color=black, only marks, mark=*, mark size=2pt] coordinates {(60.1, 49.325)};
 			\draw[dashed, grey, very thin] (axis cs:60, 49.3) -- (axis cs:120, 49.3);
-			\node[anchor=west] at (axis cs:60.1,47) {\scriptsize $I(\infty) = 49.325 \, mA$};
+			\node[anchor=west] at (axis cs:60.1,47) {\scriptsize $I(\infty) = 49.325 \, \text{мА}$};
 		\end{axis}
 	\end{tikzpicture}
 \end{figure}

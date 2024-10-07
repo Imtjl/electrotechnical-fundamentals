@@ -4,25 +4,25 @@
 	\centering
 	\begin{tikzpicture}[scale=0.88]
 		\begin{axis}[
-				width=17cm, height=12cm,
-				xlabel={Time [ms]},    % X-axis label
-				ylabel={Voltage [V]},    % Y-axis label
-				grid=major,           % Enable grid
-				legend style={at={(0.857,0.95)}, anchor=north west}, % Legend position
-				thick,                % Line thickness
-				xmin=0, xmax=600,    % X-axis range
-				ymin=-4, ymax=4,      % Y-axis range
-				axis y line=left,
-				axis x line=bottom,
-				label style={font=\small},
-				tick label style={font=\small},
-				major tick length=0.2cm,
-				ytick style={thick, black},
-				xtick style={thick, black},
-				ytick={-3, -2, -1, 0, 1, 2, 3},
-				extra y ticks={-4, 4},
-				extra y tick style={tick style={opacity=0}},
-				x unit=0.001,
+			width=17cm, height=12cm,
+			xlabel={Время [мс]},
+			ylabel={Напряжение [В]},
+			grid=major,           % Enable grid
+			legend style={at={(0.857,0.95)}, anchor=north west}, % Legend position
+			thick,                % Line thickness
+			xmin=0, xmax=600,    % X-axis range
+			ymin=-4, ymax=4,      % Y-axis range
+			axis y line=left,
+			axis x line=bottom,
+			label style={font=\small},
+			tick label style={font=\small},
+			major tick length=0.2cm,
+			ytick style={thick, black},
+			xtick style={thick, black},
+			ytick={-3, -2, -1, 0, 1, 2, 3},
+			extra y ticks={-4, 4},
+			extra y tick style={tick style={opacity=0}},
+			x unit=0.001,
 			]
 
 			% Plot V(n001)
@@ -69,21 +69,21 @@
 
 		% Secondary axis for Current
 		\begin{axis}[
-				width=17cm, height=12cm,
-				xmin=0, xmax=600,    % X-axis range (same as for Voltage)
-				ymin=-80, ymax=80,  % Y-axis range for Current
-				axis y line=right,         % Place this axis on the right for Current
-				axis x line=none,
-				thick,
-				ylabel={Current [mA]}, % Y-axis label for Current
-				label style={font=\small},
-				tick label style={font=\small},
-				major tick length=0.2cm,
-				ytick style={thick, black},
-				ytick={-60, -40, -20, 0, 20, 40, 60},
-				extra y ticks={-80, 80},
-				extra y tick style={tick style={opacity=0}},
-				legend style={at={(0.961,0.765)}, anchor=north east},
+			width=17cm, height=12cm,
+			xmin=0, xmax=600,    % X-axis range (same as for Voltage)
+			ymin=-80, ymax=80,  % Y-axis range for Current
+			axis y line=right,         % Place this axis on the right for Current
+			axis x line=none,
+			thick,
+			ylabel={Ток [мА]},
+			label style={font=\small},
+			tick label style={font=\small},
+			major tick length=0.2cm,
+			ytick style={thick, black},
+			ytick={-60, -40, -20, 0, 20, 40, 60},
+			extra y ticks={-80, 80},
+			extra y tick style={tick style={opacity=0}},
+			legend style={at={(0.961,0.765)}, anchor=north east},
 			]
 			% Plot I
 			\addplot[
