@@ -1,0 +1,46 @@
+\documentclass[tikz]{standalone}
+\usepackage{circuitikz}
+\usepackage{xcolor} % For defining colors
+\usetikzlibrary{decorations.markings} % For custom arrow positioning
+
+\begin{document}
+
+\begin{circuitikz}
+
+	% Circuit components
+	\draw
+	(0,0) to[V, l=$E_2$] (0,4) % Voltage source E2
+	to[R, l=$R_2$, i=$I_2$] (4,4) % Resistor R2 with current I2
+	to[R, l=$R_5$, i=$I_4$] (8,4) % Resistor R5 with current I4
+	to[R, l=$R_6$, i=$I_5$] (8,0) % Resistor R6 with current I5
+	-- (0,0) % Closing loop for R6
+
+	(4,0) to[R, l=$R_1$, i=$I_1$] (0,0) % Resistor R1 with current I1
+	(4,0) to[V, l=$E_3$] (4,-2) % Voltage source E3
+	(4,-2) to[R, l=$R_3$, i=$I_3$] (8,-2) -- (8,0); % Resistor R3 with current I3
+
+	% Elliptical dashed loop with larger arrow for current direction
+	\draw[
+		color=red!60, thick, dashed, % Dashed red ellipse
+		postaction={decorate,decoration={
+						markings,
+						mark=at position 0.25 with {\arrow[scale=1.5,fill=red!90]{>}},
+						mark=at position 0.5 with {\arrow[scale=1.5,fill=red!90]{>}},
+						mark=at position 0.75 with {\arrow[scale=1.5,fill=red!90]{>}},
+						mark=at position 1 with {\arrow[scale=1.5,fill=red!90]{>}},
+					}}
+	]
+	(4, 2) ellipse [x radius=2.5cm, y radius=1.5cm]
+	node[scale=1.8, draw, thick, solid, circle] {$I$}; % Ellipse and label I
+
+	% Current labels for other circuit elements
+	\draw
+	(1.5, 4) node[anchor=south] {$I_2$} % Current I2 label
+	(6.5, 4) node[anchor=south] {$I_4$} % Current I4 label
+	(4.5, -0.5) node[anchor=north] {$I_1$} % Current I1 label
+	(7.5, -1) node[anchor=east] {$I_3$} % Current I3 label
+	(7.5, 0.5) node[anchor=east] {$I_5$}; % Current I5 label
+
+\end{circuitikz}
+
+\end{document}
