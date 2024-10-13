@@ -1,0 +1,57 @@
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}[american, scale=1.4]
+
+		\draw
+		(0,0)
+		to[R, l=$R_3$, i=$I_3$] (10,0)
+		-- (10, -3)
+		to[short, *-] (10, -3);
+
+		\draw
+		(10, -3)
+		to[R, l_=$R_5$, i=$I_5$] (7.5, -3)
+		to[I, l=$E_5$] (5, -3)
+		to[short, *-] (5, -3)
+		to[R, l=$R_2$, i=$I_2$] (2.5, -3)
+		to[I, l_=$E_2$] (0, -3);
+
+		\draw
+		(0,0)
+		-- (0,-3)
+		to[short, *-] (0, -3)
+		to[R, l=$R_1$, i_=$I_1$] (5, -6);
+
+		\draw
+		(5, -3)
+		to[R, l=$R_4$, i=$I_4$] (5, -6);
+
+		\draw (5, -6) -- (7.15, -4.7);
+		\draw (7.85, -4.3) -- (10, -3);
+		\draw[rotate around={-52:(7.5,-4.5)}]
+		(7.5,-4.5) circle(0.4cm)
+		(7.5,-4.45) edge[thick, -{Straight Barb[length=2mm]}] (7.5, -4.44)
+		(7.5,-4.35) edge[thick, -{Straight Barb[length=2mm]}] (7.5, -4.34)
+		node at (8.25, -4.5) {$J_6$};
+
+		\draw (0, -3) node[draw, circle, fill=blue!10, scale=0.8] {\textcolor{blue}{1}};
+		\draw (5, -3) node[draw, circle, fill=blue!10, scale=0.8] {\textcolor{blue}{2}};
+		\draw (10, -3) node[draw, circle, fill=blue!10, scale=0.8] {\textcolor{blue}{3}};
+		\draw (5, -6) node[draw, circle, fill=blue!10, scale=0.8] {\textcolor{blue}{0}};
+
+		\draw[red, thick, dashed, ->]
+		(0, -3.4) .. controls (0, -5) and (2.5, -6.5) .. (4.5, -6.1)
+		node[midway, left, xshift=-0.2cm, red] {$U_{10}$};
+
+		\draw[red, thick, dashed, ->] (4.7, -3.3) arc[start angle=130, end angle=230, radius=1.5] node[midway, left, red] {$U_{20}$};
+
+		\draw[red, thick, dashed, ->]
+		(10, -3.4) .. controls (10, -5) and (7.5, -6.5) .. (5.5, -6.1)
+		node[midway, right, xshift=0.4cm, red] {$U_{30}$};
+
+		\draw (5, -6.25) node[ground] {};
+
+
+	\end{circuitikz}
+	\caption{Схема электрической цепи с узлами, узловыми напряжениями и токами}
+\end{figure}
