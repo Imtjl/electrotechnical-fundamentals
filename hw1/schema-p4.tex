@@ -1,0 +1,55 @@
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}[american, scale=0.9]
+
+		\draw
+		(0,0)
+		to[R, l=$R_3$, i=\textcolor{cyan!90}{$I_3$}] (10,0)
+		-- (10, -3)
+		to[short, *-] (10, -4.1);
+
+		\draw
+		(10, -3)
+		to[R, l=$R_5$, i=\textcolor{cyan!90}{$I_5$}] (7.5, -3)
+		to[I, l_=$E_5$] (5, -3)
+		to[short, *-] (5, -3)
+		to[R, l=$R_2$, i=\textcolor{cyan!90}{$I_2$}] (2.5, -3)
+		to[I, l=$E_2$] (0, -3);
+
+		\draw
+		(0,0)
+		-- (0,-3)
+		to[short, *-] (0, -3)
+		to[R, l=$R_1$, i=\textcolor{cyan!90}{$I_1$}] (0, -6)
+		-- (5, -6) to[short, *-] (10, -6)
+		-- (10, -4.9);
+
+		\draw
+		(5, -3)
+		to[R, l_=$R_4$, i_=\textcolor{cyan!90}{$I_4$}] (5, -6);
+
+		\draw
+		(10,-4.5) circle(0.4cm)
+		(10,-4.45) edge[thick, -{Straight Barb[length=2mm]}] (10, -4.44)
+		(10,-4.35) edge[thick, -{Straight Barb[length=2mm]}] (10, -4.34)
+		node at (10.75, -4.5) {$J_6$};
+
+		\draw[->, >=stealth, color=cyan!90, thick] (9.5, -5) -- (9.5, -4) node[midway, left] {\textcolor{cyan!60}{$U_{J_6}$}};
+
+		\draw[
+			color=red!60, thick, dashed,
+			postaction={decorate,decoration={
+							markings,
+							mark=at position 0.25 with {\arrow[scale=1.5,fill=red!90]{>}},
+							mark=at position 0.5 with {\arrow[scale=1.5,fill=red!90]{>}},
+							mark=at position 0.75 with {\arrow[scale=1.5,fill=red!90]{>}},
+							mark=at position 1 with {\arrow[scale=1.5,fill=red!90]{>}},
+						}}
+		]
+		(7, -4.7) ellipse [x radius=1.3cm, y radius=0.9cm]
+		node[scale=1, draw, thick, solid, circle] {$*$};
+
+
+	\end{circuitikz}
+	\caption{Схема электрической цепи с контуром * и токами}
+\end{figure}

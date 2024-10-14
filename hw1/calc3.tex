@@ -1,0 +1,35 @@
+\begin{enumerate}
+	\item Применим типивые эквивалентные преобразования к \textbf{исходной схеме}:
+	      \input{schema-given}
+	      \given{1}
+	\item Расщепляем $J_6$ на $R_4, R_5, E_5$:
+	      \input{schema-p3_1}
+	\item $J_{\text{э}1}$ \parallel $R_4 \rightarrow E_4$, $J_{\text{э}2}$ \parallel $R_5 \rightarrow E_{5'}$:
+	      \input{schema-p3_2}
+
+	      \[
+		      \begin{gathered}
+			      E_4 = R_4 \cdot J_{\text{э1}} = 2 \cdot 1.95 = 3.9 \, \text{В} \\
+			      E_{5'} = R_5 \cdot J_{\text{э2}} = 7 \cdot 1.95 = 13.65 \, \text{В} \\
+			      R_{35} = R_3 + R_5 = 14 \, \Omega \\
+			      E_{55'} = E_5 - E_{5'} = 6.65 \, \text{В}
+		      \end{gathered}
+	      \]
+	\item $R_{14}, E_4$ \parallel $R_{35}, E_{55'}$:
+	      \input{schema-p3_3}
+
+	      \[
+		      \begin{gathered}
+			      R_{1435} = \frac{1}{\frac{1}{R_{14}} + \frac{1}{R_{35}}} = \frac{1}{\frac{1}{10} + \frac{1}{14}} = 5.833 \, \Omega \\
+			      E_{455'} = R_{1435} \cdot \left(\frac{E_4}{R_{14}} - \frac{E_{55'}}{R_{35}}\right) = 5.833 \cdot \left(\frac{3.9}{10} - \frac{6.65}{14}\right) = -0.496 \, \text{В} \\
+		      \end{gathered}
+	      \]
+	\item Схема сведена к одноконтурной относительно ветви с искомым током. Искомый ток $I2$ определим с использованием ЗКII:
+	      \[
+		      \begin{gathered}
+			      I_2 \cdot (R_2 + R_{1345}) = E_2 + E_{455'} \Leftrightarrow I_2 = \frac{E_2 + E_{455'}}{R_2 + R_{1345}} \\
+			      I_2 = \frac{34.5 - 0.496}{6+5.833} = 2.874 \, \text{А}
+		      \end{gathered}
+	      \]
+
+\end{enumerate}
