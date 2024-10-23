@@ -1,56 +1,133 @@
 \subsection{Введение}
 В данной части лабораторной работы произведены измерения действующих значений входного напряжения, тока и фазового сдвига между ними для девяти различных двухполюсников, а также произведены сравнения результатов с расчётными значениями.
 
-\subsection{Параметры источника}
+\subsection{Параметры элементов исследуемых схем}
+\begin{enumerate}
+	\item Расчёт амплитуды синусоидального напряжения:
+	      \[
+		      U_m =  U_{\text{д}} \cdot \sqrt{2} = 6 \cdot \sqrt{2} = 8.485 \, \text{В}
+	      \]
+
+	\item Известные значения:
+	      \[
+		      \begin{gathered}
+			      U_{\text{д}} = 6 \, \text{В}, \psi_{\text{н}} = 0^{\circ}, f = 19.894 \, \text{Гц}, R_1 = 30 \, \text{Ом}, R_k = 5 \, \text{Ом} \\
+			      L_k = 23.094 \, \text{мГн}, C = 71.454 \, \text{мкФ}
+		      \end{gathered}
+	      \]
+
+\end{enumerate}
 
 \subsection{Общие расчёты}
-\input{calc}
+\input{calculations/calc}
 
 \subsection{Двухполюсник 1}
 \subsubsection{Схема исследуемой цепи}
-dgfdgd
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/schema1}
+	\caption{Схема замещения Двухполюсника 1 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc1}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram1}
 
 \subsection{Двухполюсник 2}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./data/schema2}
+	\caption{Схема замещения Двухполюсника 2 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc2}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram2}
 
 \subsection{Двухполюсник 3}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./data/schema3}
+	\caption{Схема замещения Двухполюсника 3 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc3}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram3}
 
 \subsection{Двухполюсник 4}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/schema4}
+	\caption{Схема замещения Двухполюсника 4 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc4}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram4}
 
 \subsection{Двухполюсник 5}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/schema5}
+	\caption{Схема замещения Двухполюсника 5 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc5}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram5}
 
 \subsection{Двухполюсник 6}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/schema6}
+	\caption{Схема замещения Двухполюсника 6 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc6}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram6}
 
 \subsection{Двухполюсник 7}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/schema7}
+	\caption{Схема замещения Двухполюсника 7 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc7}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram7}
 
 \subsection{Двухполюсник 8}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./data/schema8}
+	\caption{Схема замещения Двухполюсника 8 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc8}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram8}
 
 \subsection{Двухполюсник 9}
 \subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./data/schema9}
+	\caption{Схема замещения Двухполюсника 9 в LTspice.}
+\end{figure}
 \subsubsection{Расчётные формулы и расчёты}
-\subsubsection{Векторная диаграмма входного напряжения и тока}
+\input{calculations/calc9}
+\subsubsection{Вектора входного напряжения и тока}
+\input{vector-diagrams/diagram9}
 
 \subsection{Заполненная таблица 2.2}
 

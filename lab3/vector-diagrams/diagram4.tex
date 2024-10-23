@@ -1,0 +1,37 @@
+\[
+	\begin{gathered}
+		I_x = I \cos(\phi), I_y = I sin(\phi) \\
+		I_x = 1.039 \cdot \cos(-30.7^\circ) = 0.893 \, \text{А}, \quad
+		I_y = 1.039 \cdot \sin(-30.7^\circ) = -0.531 \, \text{А}
+	\end{gathered}
+\]
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=5.0]
+
+		% Draw the grid
+		\draw[very thin, gray] (-1.2,-1.2) grid (2.2,2.2);
+
+		% Draw the axes
+		\draw[->] (-1.2,0) -- (2.2,0) node[right] {$+1$};
+		\draw[->] (0,-1.2) -- (0,2.2) node[above] {$+j$};
+
+		% Draw the current vector (red) with a phase shift of -75 degrees
+		\draw[->, red, thick] (0,0) -- ({1.039*cos(-30.7)}, {1.039*sin(-30.7)})
+		node[end, right] {$I = 1.039 \, \text{А}$};
+		\draw[gray, thin, dashed] ({1.039*cos(-30.7)},0) node[start, below, red] {\scriptsize0.893} -- ({1.039*cos(-30.7)}, {1.039*sin(-30.7)});
+		\draw[gray, thin, dashed] (0,{1.039*sin(-30.7)}) node[start, left, red] {\scriptsize0.531} -- ({1.039*cos(-30.7)}, {1.039*sin(-30.7)});
+
+
+		% Draw the voltage vector (blue) for voltage (U)
+		\draw[->, blue, thick] (0,0) -- (0.6,0) node[end, above] {$U = 6 \, \text{В}$};
+
+		% Draw the phase angle arc (from U to I)
+		\draw[thick] (0.18,0) arc[start angle=0, end angle=-30.7, radius=0.18];
+		\node at (0.4,-0.07) {\scriptsize $\phi = 30.7^\circ$};
+
+		% Labels for the axis
+		\node[below left] at (0,0) {$0$};
+
+	\end{tikzpicture}
+\end{figure}

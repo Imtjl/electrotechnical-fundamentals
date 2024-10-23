@@ -1,0 +1,15 @@
+\begin{enumerate}
+	\item Расчёт действующего тока в цепи:
+	      \[
+		      \begin{gathered}
+			      I = U \cdot Y = U \cdot \sqrt{G^2 + B^2} \\
+			      G = G_1+G_k, B = B_k-B_1 \implies I = U \cdot \sqrt{(G_1+G_k)^2+(B_k-B_1)^2} = \\
+			      = U \cdot \sqrt{\left(\frac{1}{R_1}+\frac{R_k}{R_k^2+X_L^2}\right)^2+\left(\frac{X_L}{R_k^2+X_L^2}-0\right)^2} = \\
+			      = 6 \cdot \sqrt{\left(\frac{1}{30}+\frac{5}{5^2+2.887^2}\right)^2+\left(\frac{2.887}{5^2+2.887^2}\right)^2} = 1.217 \, \text{А}
+		      \end{gathered}
+	      \]
+	\item Расчёт фазового сдвига:
+	      \[
+		      \phi = \arctan\left(\frac{B_k-B_1}{G_1+G_k}\right) = \arctan\left(\frac{0.0866}{0.183}\right) = 25.325^{\circ}
+	      \]
+\end{enumerate}

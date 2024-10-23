@@ -1,0 +1,24 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=2.0]
+
+		% Draw the grid
+		\draw[very thin, gray] (-1.2,-1.2) grid (2.2,2.2);
+
+		% Draw the axes
+		\draw[->] (-1.2,0) -- (2.2,0) node[right] {$+1$};
+		\draw[->] (0,-1.2) -- (0,2.2) node[above] {$+j$};
+
+		% Draw the first vector (red) for current (I)
+		\draw[->, red, thick] (0,0) -- (0.249,0) node[end, below] {$I = 0.249 \, \text{А}$};
+
+		% Draw the second vector (blue) for voltage (U)
+		\draw[->, blue, thick] (0,0) -- (0.6,0);
+		\node[above right, blue] at (0.6, 0) {$U = 6 \, \text{В}$};
+
+		% Draw the angle label
+		\draw (0.1,0) arc[start angle=0, end angle=0, radius=1cm];
+		\node[above right] at (-0.03,0) {\scriptsize $\phi = 0^{\circ}$};
+
+	\end{tikzpicture}
+\end{figure}

@@ -1,0 +1,25 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=1.8]
+
+		% Draw the grid
+		\draw[very thin, gray] (-1.2,-1.2) grid (2.2,2.2);
+
+		% Draw the axes
+		\draw[->] (-1.2,0) -- (2.2,0) node[right] {$+1$};
+		\draw[->] (0,-1.2) -- (0,2.2) node[above] {$+j$};
+
+		% Draw the current vector (red) for current (I) with a phase shift of -90 degrees
+		\draw[->, red, thick] (0,0) -- (0,0.536) node[end, right] {$I = 0.0536 \, \text{А}$};
+
+		% Draw the voltage vector (blue) for voltage (U)
+		\draw[->, blue, thick] (0,0) -- (0.6,0) node[end, below] {$U = 6 \, \text{В}$};
+
+		% Draw the phase angle arc (from U to I)
+		\draw[thick] (0.2,0) arc[start angle=0, end angle=90, radius=0.2];
+		\node at (0.55,0.2) {\scriptsize $\phi = -90^\circ$};
+
+		\node[below left] at (0,0) {$0$};
+
+	\end{tikzpicture}
+\end{figure}
