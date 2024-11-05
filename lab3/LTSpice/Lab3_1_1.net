@@ -1,6 +1,0 @@
-* C:\users\boris\Documents\LTspiceXVII\projects\Lab3_1_1.asc
-V1 N001 0 SINE(0 8.485 19.894)
-R1 N001 0 30
-.tran 0 24m 0 0.01m
-.backanno
-.end
