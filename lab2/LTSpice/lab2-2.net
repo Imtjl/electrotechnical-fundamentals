@@ -1,0 +1,7 @@
+* C:\users\boris\Documents\LTspiceXVII\projects\lab2-2.asc
+R1 N001 N002 40
+V1 N001 0 PULSE(-2 2 0.1m 0.001m 0.001m 60m 120m)
+L1 N002 0 0.48
+.tran 0 120m 0 0.1m
+.backanno
+.end
