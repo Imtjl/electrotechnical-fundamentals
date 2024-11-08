@@ -1,0 +1,55 @@
+\subsection{Введение}
+В данной части лабораторной работы произведено исследование и анализ частотных характеристик RCL-цепи с последовательным и параллельным подключениями ветвей с индуктивным и ёмкостным элементами соответственно.
+
+\subsection{Параметры элементов исследуемых схем}
+\begin{center}
+	Известные значения:
+	\[
+		\begin{gathered}
+			U_{\text{д}} = 6 \, \text{В}, \psi_{\text{н}} = -150^{\circ}, R_1 = 17 \, \text{Ом}, R_k = 5 \, \text{Ом} \\
+			L_k = 23.094 \, \text{мГн}, C = 71.454 \, \text{мкФ}
+		\end{gathered}
+	\]
+\end{center}
+
+% -------------------------------
+
+\subsection{Двухполюсник 6}
+
+\subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{./data/schema1_p2}
+	\caption{Схема замещения Двухполюсника 6 (в резонансе) в LTspice.}
+\end{figure}
+
+\subsubsection{Расчётные формулы и расчёты}
+\input{calculations/calc-p2}
+
+\subsubsection{Заполненная таблица 2.3}
+\input{table_2-3}
+
+\subsubsection{Графики характеристических зависимостей от частоты}
+
+Графики зависимостей $I(f), \phi(f), U_{R_1} (f), U_k (f), U_C (f)$ поделены на два для большей наглядности и удобства разрешения масштаба - первый показывает зависимости характеристик $I(f), \phi(f)$, второй - $U_{R_1} (f), U_k (f), U_C (f)$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{./data/graph_part2_1.png}
+	\caption{Зависимость действующего тока и фазового сдвига от частоты}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{./data/graph_part2_2.png}
+	\caption{Зависимость действующих напряжений от частоты}
+\end{figure}
+
+
+\subsubsection{Векторная диаграмма для состояния резонанса}
+\input{vector-diagrams/diagram_p2_1}
+
+
+\subsection{Заполненная таблица 2.4}
+
+\subsection{Выводы}

@@ -1,0 +1,53 @@
+\begin{enumerate}
+	\item Резонансная частота:
+
+	      \[
+		      f_0 = \frac{1}{2 \cdot \pi \cdot \sqrt{L \cdot C}} = \frac{1}{2 \cdot \pi \cdot \sqrt{23.094 \cdot 71.454 \cdot 10^{-3} \cdot 10^{-6}}} = 123.896 \, \text{Гц}
+	      \]
+
+	\item Угловая частота:
+
+	      \[
+		      \omega = 2 \cdot \pi \cdot f
+	      \]
+
+	\item Действующий ток в цепи:
+
+	      \[
+		      I = \frac{U_\text{д}}{\sqrt{(R_1+R_k)^2+(\omega L - \frac{1}{\omega C})^2}}
+	      \]
+	\item Напряжение на резистивном элементе:
+
+	      \[
+		      U_{R_k} = I \cdot R_1
+	      \]
+
+	\item Напряжение на индуктивном элементе:
+
+	      \[
+		      U_k = I \cdot \sqrt{R_k^2 + (\omega L)^2}
+	      \]
+
+	\item Напряжение на ёмкостном элементе:
+
+	      \[
+		      U_C = \frac{I}{\omega C}
+	      \]
+
+	\item Фазовый сдвиг между входным напряжением и током:
+
+	      \[
+		      \phi = \arctan \left(\frac{\omega L - \frac{1}{\omega C}}{R_1 + R_k}\right)
+	      \]
+
+	\item Добротность контура:
+
+	      \[
+		      \begin{gathered}
+			      Q_p = \frac{p}{R_1+R_k} \\
+			      \\
+			      Q_e = \frac{U_{C_0}}{U_{\text{д}}}
+		      \end{gathered}
+	      \]
+
+\end{enumerate}

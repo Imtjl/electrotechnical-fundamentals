@@ -1,0 +1,86 @@
+Векторная диаграмма, представленная ниже, должна эксперементально подтверждать II Закон Кирхгофа для нашего двухполюсника:
+
+\[
+	U_{R_1} + U_k + U_C = U
+\]
+
+Диаграмма выполнена в масштабе, *масштаб*. По-хорошему, векторы напряжений на катушке и конденсаторе должны компенсировать друг друга в резонансе, но мы специально собрали схему так, что между индуктивным и ёмкостным элементом есть резистивный элемент, в данном случае на 5 Ом, так что можно наглядно сложить векторы и напряжений и получить действующее напряжение в цепи.
+
+Для построения векторной диаграммы рассчитаю фазовые сдвиги напряжений:
+
+\[
+	\begin{gathered}
+		\phi(U_{R_1}) = \psi = -150^\circ \\
+		\phi(U_{C_1}) = 180^\circ \cdot \frac{\delta h}{h} = 180^\circ \cdot \frac{29.595 - 27.577}{31.606-27.574} = 90.089^\circ \\
+		\phi(U_{L_1}) = 180^\circ \cdot \frac{\delta h}{h} = 180^\circ \cdot \frac{43.722 - 42.052}{31.606 - 27.274} = -69.39^\circ \, (U_{R_1} \, \text{опережает} \, U_{L_1})\\
+	\end{gathered}
+\]
+
+\setlength{\columnsep}{0.5cm}
+
+\begin{multicols}{2}
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=0.7]
+
+			% Draw the grid
+			\draw[very thin, gray] (-6,-6) grid (6,6);
+
+			% Draw the axes
+			\draw[-] (-6,0) -- (6,0) node[right];
+			\draw[-] (0,-6) -- (0,6) node[above];
+
+			% Draw the current vector (red) with a phase shift of -75 degrees
+			\draw[->, red, thick] (0,0) -- ({4.645*cos(-150)}, {4.645*sin(-150)})
+			node[end, above left] {$U_{R_1}$};
+
+			% Draw the current vector (red) with a phase shift of -75 degrees
+			\draw[->, orange, thick] (0,0) -- ({4.908*cos(-60)}, {4.908*sin(-60)})
+			node[end, above left] {$U_{C_1}$};
+
+			% Draw the current vector (red) with a phase shift of -75 degrees
+			\draw[->, teal, thick] (0,0) -- ({5.086*cos(-219.39)}, {5.086*sin(-219.39)})
+			node[end, above left] {$U_{L_1}$};
+
+			% Labels for the axis
+			\node[below left] at (0,0) {$0$};
+
+		\end{tikzpicture}
+	\end{figure}
+
+	\columnbreak
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=0.7]
+
+			% Draw the grid
+			\draw[very thin, gray] (-8,-6) grid (4,6);
+
+			% Draw the axes
+			\draw[-] (-8,0) -- (4,0) node[right];
+			\draw[-] (0,-6) -- (0,6) node[above];
+
+			% Draw the current vector (red) with a phase shift of -75 degrees
+			\draw[->, red, thick] ({5.086*cos(-219.39) + 4.8*cos(-60)},{5.086*sin(-219.39) + 4.8*sin(-60)}) -- ({5.086*cos(-219.39) + 4.8*cos(-60) + 4.645*cos(-150)}, {5.086*sin(-219.39) + 4.8*sin(-60) + 4.645*sin(-150)})
+			node[end, above left] {$U_{R_1}$};
+
+			% Draw the current vector (red) with a phase shift of -75 degrees
+			\draw[->, orange, thick] ({5.086*cos(-219.39)}, {5.086*sin(-219.39)}) -- ({5.086*cos(-219.39) + 4.8*cos(-60)}, {5.086*sin(-219.39) + 4.8*sin(-60)})
+			node[end, above left] {$U_{C_1}$};
+
+			% Draw the current vector (red) with a phase shift of -75 degrees
+			\draw[->, teal, thick] (0,0) -- ({5.086*cos(-219.39)}, {5.086*sin(-219.39)})
+			node[end, above left] {$U_{L_1}$};
+
+			\draw[->, blue, thick] (0,0) -- ({6.45*cos(-149.8)}, {6.45*sin(-149.8)})
+			node[end, below right] {$U$};
+
+			% Labels for the axis
+			\node[below left] at (0,0) {$0$};
+
+		\end{tikzpicture}
+	\end{figure}
+
+\end{multicols}
