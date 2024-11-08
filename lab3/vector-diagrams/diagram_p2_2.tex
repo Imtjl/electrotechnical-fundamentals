@@ -1,0 +1,80 @@
+Векторная диаграмма, представленная ниже, должна эксперементально подтверждать I Закон Кирхгофа для нашего двухполюсника:
+
+\[
+	I_1 + I_2 - I = 0
+\]
+
+Диаграмма выполнена в масштабе, 1 клетка = 1 мА. Для построения векторной диаграммы рассчитаю фазовые сдвиги действующих токов на элементах в момента резонанса:
+
+\[
+	\begin{gathered}
+		\vspace*{1.3cm} \\
+		\phi(I) = \psi = -150^\circ \\
+		\vspace*{-0.3cm} \\
+		\phi(I_1 \, \hat{} \, I) = 180^\circ \cdot \frac{\delta h}{h} = 180^\circ \cdot \frac{25.744 - 26.395}{18.908-20.274} = -85.783^\circ \\
+		\vspace*{-0.3cm} \\
+		\phi(I_2 \, \hat{} \, I) = 180^\circ \cdot \frac{\delta h}{h} = 180^\circ \cdot \frac{17.3915 - 17.5624}{18.908-20.274} = 22.52^\circ \\
+		\vspace*{1.4cm} \\
+	\end{gathered}
+\]
+
+\newpage
+\setlength{\columnsep}{0.5cm}
+
+\begin{multicols}{2}
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=0.85]
+
+			% Draw the grid
+			\draw[very thin, gray] (-5,-5) grid (5,5);
+
+			% Draw the axes
+			\draw[-] (-5,0) -- (5,0) node[right];
+			\draw[-] (0,-5) -- (0,5) node[above];
+
+			\draw[->, blue, thick] (0,0) -- ({3.23*cos(-150)}, {3.23*sin(-150)})
+			node[end, above left] {$I$};
+
+			\draw[->, orange, thick] (0,0) -- ({1.12*cos(-150-85.783)}, {1.12*sin(-150-85.783)})
+			node[end, above left] {$I_1$};
+
+			\draw[->, teal, thick] (0,0) -- ({3.32*cos(-150+22.52)}, {3.32*sin(-150+22.52)})
+			node[end, above left] {$I_2$};
+
+			% Labels for the axis
+			\node[below left] at (0,0) {$0$};
+
+		\end{tikzpicture}
+	\end{figure}
+
+	\columnbreak
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=0.85]
+
+			% Draw the grid
+			\draw[very thin, gray] (-5,-5) grid (5,5);
+
+			% Draw the axes
+			\draw[-] (-5,0) -- (5,0) node[right];
+			\draw[-] (0,-5) -- (0,5) node[above];
+
+			\draw[->, blue, thick] (0,0) -- ({3.23*cos(-148.5)}, {3.23*sin(-148.5)})
+			node[end, above left] {$I$};
+
+			\draw[->, orange, thick] ({3.32*cos(-150+22.52)}, {3.32*sin(-150+22.52)}) -- ({3.32*cos(-150+22.52) + 1.12*cos(-150-85.783)}, {3.32*sin(-150+22.52) + 1.12*sin(-150-85.783)})
+			node[end, below left] {$I_1$};
+
+			\draw[->, teal, thick] (0,0) -- ({3.32*cos(-150+22.52)}, {3.32*sin(-150+22.52)})
+			node[end, below right] {$I_2$};
+
+			% Labels for the axis
+			\node[below left] at (0,0) {$0$};
+
+		\end{tikzpicture}
+	\end{figure}
+
+\end{multicols}

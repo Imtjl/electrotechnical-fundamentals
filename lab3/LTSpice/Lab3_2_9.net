@@ -1,0 +1,8 @@
+* C:\users\boris\Desktop\dev\elec-basis\lab3\LTSpice\Lab3_2_9.asc
+V1 N001 0 SINE(0 8.485 365.806 0 0 -150)
+R1 N001 N002 17
+C1 N002 0 71.454µ
+L1 N001 0 23.094m Rser=5
+.tran 0 90m 0 0.01m
+.backanno
+.end

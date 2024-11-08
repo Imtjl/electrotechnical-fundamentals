@@ -1,0 +1,45 @@
+\begin{enumerate}
+	\item Характеристическое сопротивление:
+	      \[
+		      p = \sqrt{\frac{L}{C}} = \sqrt{\frac{23.094 \cdot 10^{-3}}{71.454 \cdot 10^{-6}}} = 17.978 \, \text{Ом}
+	      \]
+	\item Резонансная частота:
+
+	      \[
+		      \begin{gathered}
+			      f_0 = \frac{1}{2 \cdot \pi \cdot \sqrt{L \cdot C}} \cdot \sqrt{\frac{p^2 - R_k^2}{p^2-R_1^2}} = \\
+			      = \frac{1}{2 \cdot \pi \cdot \sqrt{23.094 \cdot 71.454 \cdot 10^{-3} \cdot 10^{-6}}} \cdot \sqrt{\frac{17.978^2 - 25}{17.978^2 - 17^2}} = 365.806 \, \text{Гц}
+		      \end{gathered}
+	      \]
+
+	\item \text{Вычисление общей проводимости $G$}:
+	      \[
+		      G = G_1 + G_k = \frac{R_1}{R_1^2 + X_C^2} + \frac{R_k}{R_k^2 + X_L^2}
+	      \]
+
+	\item \text{Вычисление общей проводимости $B$}:
+	      \[
+		      B = B_k - B_1 = \frac{X_L}{R_k^2 + X_L^2} - \frac{X_C}{R_1^2 + X_C^2}
+	      \]
+
+	\item \text{Вычисление общего тока $I$}:
+	      \[
+		      I = U \sqrt{G^2 + B^2}
+	      \]
+
+	\item \text{Вычисление тока через индуктивный элемент $I_1$}:
+	      \[
+		      I_1 = \frac{U}{\sqrt{R_k^2 + X_L^2}}
+	      \]
+
+	\item \text{Вычисление тока через емкостной элемент $I_2$}:
+	      \[
+		      I_2 = \frac{U}{\sqrt{R_1^2 + X_C^2}}
+	      \]
+
+	\item \text{Вычисление вызового сдвига $\varphi$}:
+	      \[
+		      \varphi = \arctan\left(\frac{B}{G}\right)
+	      \]
+
+\end{enumerate}

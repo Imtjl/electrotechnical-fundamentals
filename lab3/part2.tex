@@ -50,6 +50,44 @@
 \input{vector-diagrams/diagram_p2_1}
 
 
-\subsection{Заполненная таблица 2.4}
+% -------------------------------
+
+\subsection{Двухполюсник 9}
+
+\subsubsection{Схема исследуемой цепи}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{./data/schema2_p2}
+	\caption{Схема замещения Двухполюсника 9 (в резонансе) в LTspice.}
+\end{figure}
+
+\subsubsection{Расчётные формулы и расчёты}
+\input{calculations/calc-p2_2}
+
+\vspace*{1cm} \\
+
+\subsubsection{Заполненная таблица 2.4}
+\input{table_2-4}
+
+\subsubsection{Графики характеристических зависимостей от частоты}
+
+Графики зависимостей $I(f), \phi(f), I_1 (f), I_2 (f)$ поделены на два для большей наглядности и удобства разрешения масштаба - первый показывает зависимости характеристик $I(f), \phi(f)$, второй - $I_1 (f), I_2 (f)$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth]{./data/graph_part2_3.png}
+	\caption{Зависимость действующего тока и фазового сдвига от частоты}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{./data/graph_part2_4.png}
+	\caption{Зависимость поделённых действующих токов от частоты}
+\end{figure}
+
+
+\subsubsection{Векторная диаграмма для состояния резонанса}
+\input{vector-diagrams/diagram_p2_2}
+
 
 \subsection{Выводы}
