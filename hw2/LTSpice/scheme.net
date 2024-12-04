@@ -1,0 +1,10 @@
+* C:\users\boris\Desktop\dev\elec-basis\hw2\scheme.asc
+V1 N001 0 PULSE(0 125 0.1m 0.001m 0.001m 60m 120m)
+L1 N003 0 1.2
+R2 N002 N001 2200
+R3 N004 N002 2200
+R4 0 N004 2200
+R5 N002 N003 2200
+.tran 0 120m 0 0.1m
+.backanno
+.end
